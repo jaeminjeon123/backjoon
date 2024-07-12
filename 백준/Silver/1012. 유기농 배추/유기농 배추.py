@@ -8,10 +8,10 @@ def bfs(grid, x, y, n, m):
     grid[x][y] = 0  # 방문 표시
     
     while queue:
-        cx, cy = queue.popleft()
+        x, y = queue.popleft()
         
         for dx, dy in directions:
-            nx, ny = cx + dx, cy + dy
+            nx, ny = x + dx, y + dy
             
             if 0 <= nx < n and 0 <= ny < m and grid[nx][ny] == 1:
                 grid[nx][ny] = 0  # 방문 표시
