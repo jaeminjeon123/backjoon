@@ -3,10 +3,10 @@ from collections import deque
 def bfs(grid):
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     results = set()
-    
+    number=0
     for i in range(5):
         for j in range(5):
-            queue = deque([(i, j, grid[i][j])]) 
+            queue = deque([(i, j, grid[i][j])])  
             
             while queue:
                 x, y, number = queue.popleft()
