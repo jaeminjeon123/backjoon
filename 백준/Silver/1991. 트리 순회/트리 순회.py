@@ -1,6 +1,3 @@
-def add_node(tree, item, left, right):
-    tree[item] = (left, right)
-
 def preorder(tree, node):
     if node == '.':
         return ''
@@ -23,7 +20,7 @@ n = int(input())
 tree = {}
 for _ in range(n):
     item, left, right = input().split()
-    add_node(tree, item, left, right)
+    tree[item]=(left,right) 
 
 print(preorder(tree, 'A'))
 print(inorder(tree, 'A'))
